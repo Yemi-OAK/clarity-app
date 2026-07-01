@@ -1,12 +1,19 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { DeckService } from './services/deck';
+import { TarotCard } from './models/tarot-card';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('clarity-app');
+  card: TarotCard | null = null;
+
+  constructor(private deck: DeckService) {}
+
+  draw() {
+    this.card = this.deck.drawCard();
+  }
 }
