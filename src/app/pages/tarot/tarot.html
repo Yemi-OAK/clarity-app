@@ -1,0 +1,23 @@
+<div class="container text-center mt-5">
+  <h1 class="display-3 fw-bold mb-4">Clarity Tarot</h1>
+
+  <button class="btn btn-primary btn-lg rounded-pill px-4" (click)="draw()">
+    Draw a Card
+  </button>
+
+  @if (card) {
+     <div class="mt-4">
+
+    <h2>{{ card.name }}</h2>
+
+    <p>{{ card.meaning }}</p>
+
+    <img
+      [src]="card.imageUrl" [alt]="card.name"
+      class="tarot-card">
+
+  </div>
+
+
+  }
+</div>

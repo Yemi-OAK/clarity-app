@@ -1,19 +1,10 @@
 import { Component } from '@angular/core';
-import { DeckService } from './services/deck';
-import { TarotCard } from './models/tarot-card';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [RouterLink, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-  card: TarotCard | null = null;
-
-  constructor(private deck: DeckService) {}
-
-  draw() {
-    this.card = this.deck.drawCard();
-  }
-}
+export class App {}
