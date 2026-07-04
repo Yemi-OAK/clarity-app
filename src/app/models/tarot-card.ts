@@ -3,4 +3,5 @@ export interface TarotCard {
   name: string;
   meaning: string;
   reversed: boolean;
+  imageUrl: string;
 }

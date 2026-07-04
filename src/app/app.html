@@ -1,7 +1,13 @@
 <div style="text-align:center; padding:40px; font-family:sans-serif;">
   <h1>Clarity Tarot</h1>
 
-  <button (click)="draw()">Draw a Card</button>
+  <div class="container text-center mt-5">
+  <h1 class="display-3 fw-bold mb-4">Clarity Tarot</h1>
+
+  <button class="btn btn-primary btn-lg rounded-pill px-4" (click)="draw()">
+    Draw a Card
+  </button>
+</div>
 
   @if (card) {
     <div style="margin-top:30px;">
@@ -9,5 +15,11 @@
       <p>{{ card.reversed ? 'Reversed' : 'Upright' }}</p>
       <p>{{ card.meaning }}</p>
     </div>
+
+    <img
+[src]="card.imageUrl"
+[alt]="card.name"
+[class.reversed]="card.reversed"
+/>
   }
 </div>

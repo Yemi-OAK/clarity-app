@@ -1,0 +1,14 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.tarot-card {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.reversed {
+transform: rotate(180deg);
+}
