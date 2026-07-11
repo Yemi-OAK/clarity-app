@@ -2,19 +2,19 @@
   <router-outlet></router-outlet>
 
   <nav class="bottom-nav">
-    <a routerLink="/home" routerLinkActive="active">
-      <span class="icon">🏠</span>
+    <a routerLink="/" routerLinkActive="active"
+     [routerLinkActiveOptions]="{ exact: true }">
+      <span class="icon">⌂</span>
       <span class="label">Home</span>
     </a>
     <a routerLink="/tarot" routerLinkActive="active">
-      <span class="icon">🃏</span>
+      <span class="icon">✦</span>
       <span class="label">Tarot</span>
     </a>
     <a routerLink="/moon" routerLinkActive="active">
-      <span class="icon">🌙</span>
+      <span class="icon">☽</span>
       <span class="label">Moon Phase</span>
     </a>
   </nav>
 </div>
 
-<router-outlet></router-outlet>

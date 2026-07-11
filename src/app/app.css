@@ -12,22 +12,27 @@ body {
 
 .app-container {
   min-height: 100vh;
-  padding-bottom: 70px;
+  padding-bottom: 100px;
   background-color: #0d0d1a;
 }
 
 .bottom-nav {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #1a0a2e;
-  border-top: 1px solid #6b21a8;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 10px 0;
-  z-index: 100;
+  padding: 12px 0;
+  z-index: 1000;
 }
 
 .bottom-nav a {
@@ -35,10 +40,10 @@ body {
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: #9d6ec7;
-  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
   gap: 4px;
   transition: color 0.2s;
+  padding: 4px 20px;
 }
 
 .bottom-nav a.active {
@@ -46,24 +51,10 @@ body {
 }
 
 .bottom-nav .icon {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .bottom-nav .label {
   font-size: 10px;
   letter-spacing: 0.5px;
-}
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 16px;
-}
-
-.tarot-card {
-  width: 100%;
-  border-radius: 16px;
-}
-
-.reversed {
-transform: rotate(180deg);
 }

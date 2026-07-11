@@ -4,7 +4,8 @@ import { Tarot } from './pages/tarot/tarot';
 import { Moon } from './pages/moon/moon';
 
 export const routes: Routes = [
-  { path: '', component: Home },
+  { path: '', component: Home, pathMatch: 'full' },
   { path: 'tarot', component: Tarot },
   { path: 'moon', component: Moon },
+  { path: '**', redirectTo: '' }
 ];
